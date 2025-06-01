@@ -187,9 +187,9 @@ function App() {
         if (data.models && data.models.length > 0) {
           setModels(data.models);
 
-          if (!savedModel) {
-            setSelectedModel(data.models[0].name);
-          }
+          // Set the first model as the default selected model
+          setSelectedModel(data.models[0].name);
+          
         }
       } catch (err) {
         console.error("Failed to fetch models:", err);
